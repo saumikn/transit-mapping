@@ -1,0 +1,16 @@
+name: mapping
+channels:
+  - conda-forge
+dependencies:
+  - geopandas
+  - ipykernel
+  - seaborn
+  - osmnx
+  - graph-tool
+  - tqdm
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pip
+  - pip:
+      - line-profiler
+      - ax-platform
