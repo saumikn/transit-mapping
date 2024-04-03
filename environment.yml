@@ -2,15 +2,12 @@ name: mapping
 channels:
   - conda-forge
 dependencies:
-  - geopandas
   - ipykernel
+  - geopandas
   - seaborn
   - osmnx
   - graph-tool
   - tqdm
-  - pytorch::pytorch
-  - pytorch::torchvision
+  - memory_profiler
+  - line_profiler
   - pip
-  - pip:
-      - line-profiler
-      - ax-platform

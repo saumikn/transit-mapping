@@ -170,6 +170,10 @@ def get_hex_metros(hexs):
     df2["trip_len"] = df2.groupby("trip_id").arrival_time.transform(
         lambda group: group.iloc[-1] - group.iloc[0]
     )
+    
+    # print(df2)
+    # print(list(current_headways))
+    # print(df2.groupby("route_id").trip_len.max())
     df_route_lens = dict(df2.groupby("route_id").trip_len.max()[list(current_headways)] * 2)
     return metro_edges, df_route_lens
 
@@ -401,6 +405,7 @@ if __name__ == '__main__':
     network = sys.argv[1]
     service = sys.argv[2]
     hs = int(sys.argv[3])
+    
     
     crs = "32615"
     mps = 1.38
